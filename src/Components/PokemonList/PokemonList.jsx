@@ -55,15 +55,16 @@ function PokemonList() {
         <div className="pokemon-list-wrapper">
         <div className="pokemon-wrapper">
         {(isLoading) ? 'Loading...' :
-            pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} />)
+            pokemonList.map((p) => <Pokemon name={p.name} image={p.image} key={p.id} id={p.id} />)
         }
-        </div>
-
-        </div>
         <div className="controls">
             <button disabled={prevUrl == null} onClick={() => setPokedexUrl(prevUrl)}>prev</button>
             <button disabled={nextUrl == null} onClick={() => setPokedexUrl(nextUrl)}>next</button>
         </div>
+        </div>
+
+        </div>
+
         </>
     );
 }
